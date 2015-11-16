@@ -1,0 +1,738 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E23CE2FEC011657B28137E0ED3CA721 /* Dimension.swift */; };
+		2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9AA558EE7C7ED2BD31B58A56438592C /* Edge.swift */; };
+		2137131CAD841B7420CF1AC1CC19B619 /* Pods-AnimationClub1-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B78A052E138BCB70B7FE23D62AB28ADC /* Pods-AnimationClub1-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2474C0C39D92E9C80D3959CD51BA45A5 /* Pods-AnimationClub1-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 91B84633A28294F888A737C68CDEC0D1 /* Pods-AnimationClub1-dummy.m */; };
+		28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC46FFC7DDB178E3BD611737EBF2104 /* Compound.swift */; };
+		369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEBB7A46AB1BCE18F00B683998086AFF /* Distribute.swift */; };
+		37C2EE1C1B62F7A6962EC2E515C7016B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C67DFC18B64ED49E17196327486063C /* Context.swift */; };
+		48ADE3FB3F30FCA5893083351449DA98 /* ViewUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = B84731979502C1051DDD3380C8CBE6F8 /* ViewUtils.swift */; };
+		5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56625CDC747644FAC737192449343A55 /* Edges.swift */; };
+		584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14849D2549F22D671E242FAECD1331B0 /* Align.swift */; };
+		7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26A6A53ACE9667E8AA3861744F5C9B69 /* Expression.swift */; };
+		8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEFE289F6470E1ACA814547C4E22A9CA /* LayoutProxy.swift */; };
+		94FA81E5AAD99FC80DC4123F16239B36 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		AFEB876ED9E85491D64CB266B05E63E1 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 798B7F200D6313E90114A659B39DB945 /* Pods-dummy.m */; };
+		B23E3B878363F72D1E874E46EB62FA7F /* Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = F265A7562D847007FDDD677420FD545F /* Size.swift */; };
+		B25EFDF6635B3E82FB6FE92C28046573 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		B90891688A088BC37455234028C2E993 /* Cartography-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FCA622414D4C125BCAAF5DD8699111EE /* Cartography-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15DFC7AE19B16C500579948C2ED6C7E1 /* Extensions.swift */; };
+		C3649839064E53A4BF767D2EF29651EF /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56CE44DCB4946E77677C96B1BE3177AF /* Priority.swift */; };
+		C37413612C3C271379843EA6A305C328 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 11CD43A3936ED8BC3305A8B74BEE7351 /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58ECDFC04192522C42484F2F250E1157 /* Constrain.swift */; };
+		D3C01862D88692FA2E85A2D84345982B /* Point.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5898767B1647572EF440D093A2FAE4DB /* Point.swift */; };
+		D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 48AF7B4AEA4CCB0E88BC528CE09ACD9F /* Cartography-dummy.m */; };
+		E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 858E2F5191313A661107D67F60852728 /* ConstraintGroup.swift */; };
+		EB9E85B0CE6A53DCBDE040A716B5DBF8 /* Property.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8454B02CDEC1EDED887D3D5608542F /* Property.swift */; };
+		EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C41DC75EA13D7B27EC0501E697376A /* Coefficients.swift */; };
+		F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 373222A8C261810FACCB20F9088BB09F /* Constraint.swift */; };
+		F95ADCA0B85C6C0640372D3EFBBF1AD6 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38576033E15D19183F502B47A58D1FA /* View.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		675C8100544CFA147FD5DCE0D9603A57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3A04698AAE4D6124C20602D622956E5;
+			remoteInfo = Cartography;
+		};
+		C0A5319C0DB5EFC4887678244239919B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C3A04698AAE4D6124C20602D622956E5;
+			remoteInfo = Cartography;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		11CD43A3936ED8BC3305A8B74BEE7351 /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		121243291CFA531819097F372B4C750D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		14849D2549F22D671E242FAECD1331B0 /* Align.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Align.swift; path = Cartography/Align.swift; sourceTree = "<group>"; };
+		15DFC7AE19B16C500579948C2ED6C7E1 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Extensions.swift; path = Cartography/Extensions.swift; sourceTree = "<group>"; };
+		19F7F9F56E506947A0A1F6B00FB0909B /* Pods-AnimationClub1-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimationClub1-frameworks.sh"; sourceTree = "<group>"; };
+		1BC46FFC7DDB178E3BD611737EBF2104 /* Compound.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Compound.swift; path = Cartography/Compound.swift; sourceTree = "<group>"; };
+		1CF4E75818C0BF5B8550569F460B8A64 /* Cartography.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Cartography.modulemap; sourceTree = "<group>"; };
+		20F0DA6678D00F1D58AF382823DA29E8 /* Cartography.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Cartography.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2219E72042B91E569B6F85060890910B /* Cartography-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-prefix.pch"; sourceTree = "<group>"; };
+		26A6A53ACE9667E8AA3861744F5C9B69 /* Expression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Expression.swift; path = Cartography/Expression.swift; sourceTree = "<group>"; };
+		2C67DFC18B64ED49E17196327486063C /* Context.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Context.swift; path = Cartography/Context.swift; sourceTree = "<group>"; };
+		373222A8C261810FACCB20F9088BB09F /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Cartography/Constraint.swift; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F9EE1E3E982126E638351563DDAD073 /* Pods-AnimationClub1.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimationClub1.release.xcconfig"; sourceTree = "<group>"; };
+		41B7A959B9C0E83755180D6BD85AF225 /* Cartography.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cartography.xcconfig; sourceTree = "<group>"; };
+		48AF7B4AEA4CCB0E88BC528CE09ACD9F /* Cartography-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cartography-dummy.m"; sourceTree = "<group>"; };
+		5151DC2FA17301412DC9800D8902B5D0 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		56625CDC747644FAC737192449343A55 /* Edges.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edges.swift; path = Cartography/Edges.swift; sourceTree = "<group>"; };
+		56CE44DCB4946E77677C96B1BE3177AF /* Priority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = Cartography/Priority.swift; sourceTree = "<group>"; };
+		5898767B1647572EF440D093A2FAE4DB /* Point.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Point.swift; path = Cartography/Point.swift; sourceTree = "<group>"; };
+		58ECDFC04192522C42484F2F250E1157 /* Constrain.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constrain.swift; path = Cartography/Constrain.swift; sourceTree = "<group>"; };
+		635B37118E19FCACCCACCBD23AA94450 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		6E23CE2FEC011657B28137E0ED3CA721 /* Dimension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Dimension.swift; path = Cartography/Dimension.swift; sourceTree = "<group>"; };
+		7948AB79DD75CC5F1673C5049C66623E /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		798B7F200D6313E90114A659B39DB945 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		7AD22321000CEC5ED2C969165C1548D2 /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		858E2F5191313A661107D67F60852728 /* ConstraintGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintGroup.swift; path = Cartography/ConstraintGroup.swift; sourceTree = "<group>"; };
+		86AD5F1C61225A1934264F07445A99FB /* Pods-AnimationClub1-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AnimationClub1-acknowledgements.plist"; sourceTree = "<group>"; };
+		89C41DC75EA13D7B27EC0501E697376A /* Coefficients.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Coefficients.swift; path = Cartography/Coefficients.swift; sourceTree = "<group>"; };
+		8A8454B02CDEC1EDED887D3D5608542F /* Property.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Property.swift; path = Cartography/Property.swift; sourceTree = "<group>"; };
+		90DB661355210AD8C73CB87718D42AAD /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		91B84633A28294F888A737C68CDEC0D1 /* Pods-AnimationClub1-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AnimationClub1-dummy.m"; sourceTree = "<group>"; };
+		9BB70ECADD1FF775F2272D4B8AAC0D11 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		A28082F32D70A384379676B445D4D113 /* Pods_AnimationClub1.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AnimationClub1.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A3A478F5AADE95D011E968F23E721870 /* Pods-AnimationClub1.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AnimationClub1.modulemap"; sourceTree = "<group>"; };
+		A7BF6109CC31B8F2397E9CBABBB16E1D /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B78A052E138BCB70B7FE23D62AB28ADC /* Pods-AnimationClub1-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AnimationClub1-umbrella.h"; sourceTree = "<group>"; };
+		B84731979502C1051DDD3380C8CBE6F8 /* ViewUtils.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewUtils.swift; path = Cartography/ViewUtils.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C00DEDB3393B99CB128BA438082F021C /* Pods-AnimationClub1-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AnimationClub1-resources.sh"; sourceTree = "<group>"; };
+		C25F5C4AEA955649D43D97FFD54F104E /* Pods-AnimationClub1-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AnimationClub1-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C2CC8B5C7BF270B453386AC6709B630B /* Pods-AnimationClub1.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-AnimationClub1.debug.xcconfig"; sourceTree = "<group>"; };
+		C76E8BD5458856056A45E3DCB74D4E83 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		CEBB7A46AB1BCE18F00B683998086AFF /* Distribute.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Distribute.swift; path = Cartography/Distribute.swift; sourceTree = "<group>"; };
+		D4447757B9A0EC8C1E707B05A89E3E9E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E38576033E15D19183F502B47A58D1FA /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cartography/View.swift; sourceTree = "<group>"; };
+		F265A7562D847007FDDD677420FD545F /* Size.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Size.swift; path = Cartography/Size.swift; sourceTree = "<group>"; };
+		F9AA558EE7C7ED2BD31B58A56438592C /* Edge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Edge.swift; path = Cartography/Edge.swift; sourceTree = "<group>"; };
+		FA6B99CC5B5109A7B9F176678EEB3327 /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		FCA622414D4C125BCAAF5DD8699111EE /* Cartography-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cartography-umbrella.h"; sourceTree = "<group>"; };
+		FEFE289F6470E1ACA814547C4E22A9CA /* LayoutProxy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutProxy.swift; path = Cartography/LayoutProxy.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		429A34DF3BBD7321C9C7D6FBF5F1E3FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				94FA81E5AAD99FC80DC4123F16239B36 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9192C0FB7239D544E26BD20435094020 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B25EFDF6635B3E82FB6FE92C28046573 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D4C1F2F37B651BF2EFFFCC602FBC6384 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37C2EE1C1B62F7A6962EC2E515C7016B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11B3FD516C171271FE00AF4686AF206A /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1CF4E75818C0BF5B8550569F460B8A64 /* Cartography.modulemap */,
+				41B7A959B9C0E83755180D6BD85AF225 /* Cartography.xcconfig */,
+				48AF7B4AEA4CCB0E88BC528CE09ACD9F /* Cartography-dummy.m */,
+				2219E72042B91E569B6F85060890910B /* Cartography-prefix.pch */,
+				FCA622414D4C125BCAAF5DD8699111EE /* Cartography-umbrella.h */,
+				7948AB79DD75CC5F1673C5049C66623E /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Cartography";
+			sourceTree = "<group>";
+		};
+		727FC7FA6EE7D927BA9AEF1ABCD661A2 /* Pods-AnimationClub1 */ = {
+			isa = PBXGroup;
+			children = (
+				5151DC2FA17301412DC9800D8902B5D0 /* Info.plist */,
+				A3A478F5AADE95D011E968F23E721870 /* Pods-AnimationClub1.modulemap */,
+				C25F5C4AEA955649D43D97FFD54F104E /* Pods-AnimationClub1-acknowledgements.markdown */,
+				86AD5F1C61225A1934264F07445A99FB /* Pods-AnimationClub1-acknowledgements.plist */,
+				91B84633A28294F888A737C68CDEC0D1 /* Pods-AnimationClub1-dummy.m */,
+				19F7F9F56E506947A0A1F6B00FB0909B /* Pods-AnimationClub1-frameworks.sh */,
+				C00DEDB3393B99CB128BA438082F021C /* Pods-AnimationClub1-resources.sh */,
+				B78A052E138BCB70B7FE23D62AB28ADC /* Pods-AnimationClub1-umbrella.h */,
+				C2CC8B5C7BF270B453386AC6709B630B /* Pods-AnimationClub1.debug.xcconfig */,
+				3F9EE1E3E982126E638351563DDAD073 /* Pods-AnimationClub1.release.xcconfig */,
+			);
+			name = "Pods-AnimationClub1";
+			path = "Target Support Files/Pods-AnimationClub1";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				F62FECA7DA223FAFD017635E2EE8D5AF /* Pods */,
+				808E7DC3E6FA199699479BEB15C42E9D /* Products */,
+				FB0CCA7CA840AB0D8135619A835C0DBD /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		808E7DC3E6FA199699479BEB15C42E9D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20F0DA6678D00F1D58AF382823DA29E8 /* Cartography.framework */,
+				D4447757B9A0EC8C1E707B05A89E3E9E /* Pods.framework */,
+				A28082F32D70A384379676B445D4D113 /* Pods_AnimationClub1.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C34E61DCCE3BB841E3E83DB6F21423B3 /* Cartography */ = {
+			isa = PBXGroup;
+			children = (
+				14849D2549F22D671E242FAECD1331B0 /* Align.swift */,
+				89C41DC75EA13D7B27EC0501E697376A /* Coefficients.swift */,
+				1BC46FFC7DDB178E3BD611737EBF2104 /* Compound.swift */,
+				58ECDFC04192522C42484F2F250E1157 /* Constrain.swift */,
+				373222A8C261810FACCB20F9088BB09F /* Constraint.swift */,
+				858E2F5191313A661107D67F60852728 /* ConstraintGroup.swift */,
+				2C67DFC18B64ED49E17196327486063C /* Context.swift */,
+				6E23CE2FEC011657B28137E0ED3CA721 /* Dimension.swift */,
+				CEBB7A46AB1BCE18F00B683998086AFF /* Distribute.swift */,
+				F9AA558EE7C7ED2BD31B58A56438592C /* Edge.swift */,
+				56625CDC747644FAC737192449343A55 /* Edges.swift */,
+				26A6A53ACE9667E8AA3861744F5C9B69 /* Expression.swift */,
+				15DFC7AE19B16C500579948C2ED6C7E1 /* Extensions.swift */,
+				FEFE289F6470E1ACA814547C4E22A9CA /* LayoutProxy.swift */,
+				5898767B1647572EF440D093A2FAE4DB /* Point.swift */,
+				56CE44DCB4946E77677C96B1BE3177AF /* Priority.swift */,
+				8A8454B02CDEC1EDED887D3D5608542F /* Property.swift */,
+				F265A7562D847007FDDD677420FD545F /* Size.swift */,
+				E38576033E15D19183F502B47A58D1FA /* View.swift */,
+				B84731979502C1051DDD3380C8CBE6F8 /* ViewUtils.swift */,
+				11B3FD516C171271FE00AF4686AF206A /* Support Files */,
+			);
+			path = Cartography;
+			sourceTree = "<group>";
+		};
+		E7DFEB4A2D197A5572692C8879D378CC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7BF6109CC31B8F2397E9CBABBB16E1D /* Info.plist */,
+				7AD22321000CEC5ED2C969165C1548D2 /* Pods.modulemap */,
+				FA6B99CC5B5109A7B9F176678EEB3327 /* Pods-acknowledgements.markdown */,
+				90DB661355210AD8C73CB87718D42AAD /* Pods-acknowledgements.plist */,
+				798B7F200D6313E90114A659B39DB945 /* Pods-dummy.m */,
+				C76E8BD5458856056A45E3DCB74D4E83 /* Pods-frameworks.sh */,
+				9BB70ECADD1FF775F2272D4B8AAC0D11 /* Pods-resources.sh */,
+				11CD43A3936ED8BC3305A8B74BEE7351 /* Pods-umbrella.h */,
+				635B37118E19FCACCCACCBD23AA94450 /* Pods.debug.xcconfig */,
+				121243291CFA531819097F372B4C750D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		F62FECA7DA223FAFD017635E2EE8D5AF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C34E61DCCE3BB841E3E83DB6F21423B3 /* Cartography */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		FB0CCA7CA840AB0D8135619A835C0DBD /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E7DFEB4A2D197A5572692C8879D378CC /* Pods */,
+				727FC7FA6EE7D927BA9AEF1ABCD661A2 /* Pods-AnimationClub1 */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		08FCDCE495B9BC9C68E7180039D9D0F0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2137131CAD841B7420CF1AC1CC19B619 /* Pods-AnimationClub1-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		514705BF944036B79FA99816C564643C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B90891688A088BC37455234028C2E993 /* Cartography-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FED505273E4E0439C06A1A063D480CE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C37413612C3C271379843EA6A305C328 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		BFAA5E148F8C9061C667259A1D8F17B9 /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA5827FB279E2B5901B33799106C8CBF /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				A1629E63FB2704526CA0310542FEC204 /* Sources */,
+				9192C0FB7239D544E26BD20435094020 /* Frameworks */,
+				FED505273E4E0439C06A1A063D480CE4 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				ACF88B61F26B7FB8A9FCEBFBDE9EFFD0 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = D4447757B9A0EC8C1E707B05A89E3E9E /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		C3A04698AAE4D6124C20602D622956E5 /* Cartography */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B22DC939D187391042315573DBEE7623 /* Build configuration list for PBXNativeTarget "Cartography" */;
+			buildPhases = (
+				B962ED42E882856B9D168260BB18AE95 /* Sources */,
+				429A34DF3BBD7321C9C7D6FBF5F1E3FB /* Frameworks */,
+				514705BF944036B79FA99816C564643C /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Cartography;
+			productName = Cartography;
+			productReference = 20F0DA6678D00F1D58AF382823DA29E8 /* Cartography.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FBC9A5AA688DDAA289CD5B8A061605C0 /* Pods-AnimationClub1 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5EF7D248E5822E83C268AA45FAB8923A /* Build configuration list for PBXNativeTarget "Pods-AnimationClub1" */;
+			buildPhases = (
+				586A48C412D06805410BA68CE4D94D4F /* Sources */,
+				D4C1F2F37B651BF2EFFFCC602FBC6384 /* Frameworks */,
+				08FCDCE495B9BC9C68E7180039D9D0F0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2ED94D83471C99E80AA29FEC5938BA61 /* PBXTargetDependency */,
+			);
+			name = "Pods-AnimationClub1";
+			productName = "Pods-AnimationClub1";
+			productReference = A28082F32D70A384379676B445D4D113 /* Pods_AnimationClub1.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 808E7DC3E6FA199699479BEB15C42E9D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C3A04698AAE4D6124C20602D622956E5 /* Cartography */,
+				BFAA5E148F8C9061C667259A1D8F17B9 /* Pods */,
+				FBC9A5AA688DDAA289CD5B8A061605C0 /* Pods-AnimationClub1 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		586A48C412D06805410BA68CE4D94D4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2474C0C39D92E9C80D3959CD51BA45A5 /* Pods-AnimationClub1-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1629E63FB2704526CA0310542FEC204 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEB876ED9E85491D64CB266B05E63E1 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B962ED42E882856B9D168260BB18AE95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				584B68A7069844742AEF67ED9311FF50 /* Align.swift in Sources */,
+				D56BD3B0ACF32790F3EF43EA3DB08016 /* Cartography-dummy.m in Sources */,
+				EE94E3F06DA2F096BA43F0679567DC4B /* Coefficients.swift in Sources */,
+				28515F6FFAA0E2F9591A862D532F33AC /* Compound.swift in Sources */,
+				D2C9087C6581055C25D5559F934AF65B /* Constrain.swift in Sources */,
+				F469BC9885602957FCB73DD39B5B92B0 /* Constraint.swift in Sources */,
+				E1451AA498D7B41C4E049F5D9027B4A7 /* ConstraintGroup.swift in Sources */,
+				452C09D0CAC1F8286ABA1CE076033B23 /* Context.swift in Sources */,
+				0729DED1737DCDB309394E0B59393F37 /* Dimension.swift in Sources */,
+				369CA2AACEED2517C99D77D7700DFCEA /* Distribute.swift in Sources */,
+				2057FF930EF0F28E7AD548BF23BE78EE /* Edge.swift in Sources */,
+				5044CA9F7CCBB02F3C294106022FCF9F /* Edges.swift in Sources */,
+				7CD04D81B5ED213A105DFC517187EB87 /* Expression.swift in Sources */,
+				BE2FC20F5EDBAE658F688978AB12C279 /* Extensions.swift in Sources */,
+				8378B61D28075525380201114F6E4582 /* LayoutProxy.swift in Sources */,
+				D3C01862D88692FA2E85A2D84345982B /* Point.swift in Sources */,
+				C3649839064E53A4BF767D2EF29651EF /* Priority.swift in Sources */,
+				EB9E85B0CE6A53DCBDE040A716B5DBF8 /* Property.swift in Sources */,
+				B23E3B878363F72D1E874E46EB62FA7F /* Size.swift in Sources */,
+				F95ADCA0B85C6C0640372D3EFBBF1AD6 /* View.swift in Sources */,
+				48ADE3FB3F30FCA5893083351449DA98 /* ViewUtils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2ED94D83471C99E80AA29FEC5938BA61 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cartography;
+			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
+			targetProxy = C0A5319C0DB5EFC4887678244239919B /* PBXContainerItemProxy */;
+		};
+		ACF88B61F26B7FB8A9FCEBFBDE9EFFD0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = Cartography;
+			target = C3A04698AAE4D6124C20602D622956E5 /* Cartography */;
+			targetProxy = 675C8100544CFA147FD5DCE0D9603A57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		2A4875CCC15711F355328D4D36BB210F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41B7A959B9C0E83755180D6BD85AF225 /* Cartography.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Cartography;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		919BFE3CED600E023F9CEB9CE07178D3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C2CC8B5C7BF270B453386AC6709B630B /* Pods-AnimationClub1.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AnimationClub1/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnimationClub1/Pods-AnimationClub1.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_AnimationClub1;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		9768FD27A4E2D1352ED646F0C41F0C60 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 41B7A959B9C0E83755180D6BD85AF225 /* Cartography.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Cartography/Cartography-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Cartography/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Cartography/Cartography.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Cartography;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A92C1D776493FDEFD01DFEE8489DD0A8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 121243291CFA531819097F372B4C750D /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		E43846B588E1892F3093F3B7082B6DFB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EAAF2A8FCD0728433DF975F318682FE1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 635B37118E19FCACCCACCBD23AA94450 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F9F0C8F375980A310BABBAAFC6598FBE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F9EE1E3E982126E638351563DDAD073 /* Pods-AnimationClub1.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-AnimationClub1/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-AnimationClub1/Pods-AnimationClub1.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_AnimationClub1;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C074F63C9EE7CB4D8C618390A32CEC35 /* Debug */,
+				E43846B588E1892F3093F3B7082B6DFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5EF7D248E5822E83C268AA45FAB8923A /* Build configuration list for PBXNativeTarget "Pods-AnimationClub1" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				919BFE3CED600E023F9CEB9CE07178D3 /* Debug */,
+				F9F0C8F375980A310BABBAAFC6598FBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B22DC939D187391042315573DBEE7623 /* Build configuration list for PBXNativeTarget "Cartography" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2A4875CCC15711F355328D4D36BB210F /* Debug */,
+				9768FD27A4E2D1352ED646F0C41F0C60 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA5827FB279E2B5901B33799106C8CBF /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAAF2A8FCD0728433DF975F318682FE1 /* Debug */,
+				A92C1D776493FDEFD01DFEE8489DD0A8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
