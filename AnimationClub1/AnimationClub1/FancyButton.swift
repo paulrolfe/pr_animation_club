@@ -129,11 +129,11 @@ class FancyButton: UIView {
         circle.layer.cornerRadius = CGRectGetHeight(circle.bounds) / 2
         circle.backgroundColor = UIColor.fancy_purple().colorWithAlphaComponent(0.5)
         underButtonView.addSubview(circle)
-        constrain(circle, button) { (circle, button) -> () in
+        constrain(circle, button) { (circle, button) in
             circle.width == circle.height
             circle.width == 20
             circle.center == button.center
-        }
+        }  
         
         let scale = (CGRectGetWidth(underButtonView.bounds) / 20) * 2
         UIView.animateWithDuration(0.5, animations: {
