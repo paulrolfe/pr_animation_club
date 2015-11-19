@@ -33,6 +33,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         automaticallyAdjustsScrollViewInsets = false
         tableView.tableFooterView = UIView()
         tableView.separatorStyle = .None
+        tableView.backgroundColor = UIColor.blackColor()
     }
     
     func leftBarButtonItemTapped() {
@@ -47,9 +48,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         let visibleCells = tableView.visibleCells
         for cell in visibleCells.reverse() {
             let index = Double(visibleCells.reverse().indexOf(cell)!)
-            let duration: Double = 0.5 * pow(0.98, index)
-            let delay = (0.05) * index * pow(1.02, index)
-            let targetFrame = CGRect(x: CGRectGetMinX(cell.frame), y: CGRectGetMaxY(tableView.frame), width: CGRectGetWidth(cell.bounds), height: CGRectGetHeight(cell.bounds))
+            let duration: Double = 0.5
+            let delay =  (duration / 8) * index * pow(1.08, index)
+            cell.frame = self.tableView.convertRect(cell.frame, toView: view)
+            view.insertSubview(cell, aboveSubview: tableView)
+            let targetFrame = CGRect(x: CGRectGetMinX(cell.frame), y: CGRectGetMaxY(tableView.frame) + CGRectGetMinY(cell.frame), width: CGRectGetWidth(cell.bounds), height: CGRectGetHeight(cell.bounds))
             UIView.animateWithDuration(duration, delay: delay, options: [.AllowAnimatedContent, .CurveEaseIn], animations: {
                 cell.frame = targetFrame
                 }, completion: { _ in
@@ -99,10 +102,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
         if needsAnimationAtIndexPath(indexPath) {
             currentlyAnimatingIndexPaths.append(indexPath)
-            let duration: Double = 0.3
-            let delay = (0.05) * Double(currentlyAnimatingIndexPaths.indexOf(indexPath)!)
+            let index = Double(currentlyAnimatingIndexPaths.indexOf(indexPath)!)
+            let duration: Double = 0.5
+            let delay =  (duration / 8) * index * pow(1.08, index)
             let targetFrame = cell.frame
-            cell.frame = CGRect(x: CGRectGetMinX(cell.frame), y: CGRectGetMaxY(tableView.frame), width: CGRectGetWidth(cell.bounds), height: CGRectGetHeight(cell.bounds))
+            cell.frame = CGRect(x: CGRectGetMinX(cell.frame), y: CGRectGetMaxY(tableView.frame) + CGRectGetMinY(cell.frame), width: CGRectGetWidth(cell.bounds), height: CGRectGetHeight(cell.bounds))
             UIView.animateWithDuration(duration, delay: delay, options: [.AllowAnimatedContent, .CurveEaseOut], animations: {
                 cell.frame = targetFrame
                 }, completion: { _ in
@@ -122,6 +126,8 @@ class LeaderboardTableViewCell: UITableViewCell {
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var changeImageView: UIImageView!
     
+    var ratioView: UIView?
+    
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -132,8 +138,15 @@ class LeaderboardTableViewCell: UITableViewCell {
         addContentLayerWithRatio(player.scoreRelativeToFirst(topPlayer.score))
     }
     
-    internal func addContentLayerWithRatio(ratio: Float) {
-        
+    internal func addContentLayerWithRatio(ratio: Double) {
+        let ratioframe = CGRect(x: 0, y: 0, width: CGFloat(ratio) * CGRectGetMaxX(self.bounds), height: CGRectGetHeight(self.bounds))
+        ratioView = UIView(frame: ratioframe)
+        ratioView?.backgroundColor = UIColor(white: 1.0, alpha: 0.1)
+        self.contentView.addSubview(ratioView!)
+    }
+    
+    override func prepareForReuse() {
+        self.ratioView?.removeFromSuperview()
     }
     
 }
@@ -142,22 +155,27 @@ struct Player {
     var name: String
     var score: Int
     
-    func scoreRelativeToFirst(first: Int) -> Float {
-        return Float(score / first)
+    func scoreRelativeToFirst(first: Int) -> Double {
+        return Double(score) / Double(first)
     }
 }
 
 func samplePlayerArray() -> [Player] {
-    return [Player(name: "Paul", score: 50000),
-            Player(name: "Logan", score: 42),
-            Player(name: "Andrew", score: 43000),
-            Player(name: "Sara", score: 40000),
-            Player(name: "Bryan", score: 49001),
-            Player(name: "Eddy", score: 43043),
-            Player(name: "Mark D", score: 34000),
-            Player(name: "Mark K", score: 43001),
-            Player(name: "Matt", score: 43002),
-            Player(name: "Andrea", score: 44001)
+    return [
+        Player(name: "Paul", score: 50000),
+        Player(name: "Logan", score: 20000),
+        Player(name: "Andrew", score: 43000),
+        Player(name: "Sara", score: 41000),
+        Player(name: "Bryan", score: 49000),
+        Player(name: "Eddy", score: 44000),
+        Player(name: "Mark D", score: 34000),
+        Player(name: "Mark K", score: 48000),
+        Player(name: "Matt", score: 40000),
+        Player(name: "Andrea", score: 44001),
+        Player(name: "Tong", score: 34000),
+        Player(name: "JR", score: 48000),
+        Player(name: "Aaron", score: 40000),
+        Player(name: "Brian", score: 44001)
     ]
 }
 
