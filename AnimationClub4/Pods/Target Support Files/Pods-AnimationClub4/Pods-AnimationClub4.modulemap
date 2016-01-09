@@ -1,0 +1,6 @@
+framework module Pods_AnimationClub4 {
+  umbrella header "Pods-AnimationClub4-umbrella.h"
+
+  export *
+  module * { export * }
+}

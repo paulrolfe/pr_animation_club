@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import IntrepidSwiftWisdom
 
 class ViewController: UIViewController {
     
@@ -33,15 +34,17 @@ class ViewController: UIViewController {
     }
     
     dynamic private func next() {
-        UIView.animateWithDuration(0.5, animations: animateOut, completion: loadNextData)
+        UIView.pa_percentAnimate(2, animation: positionViewsBasedOnAnimationState)
     }
     
-    func animateOut() {
-        // Just the movements, this is already inside of an animation
-        bottomBackgroundView.center.y -= 1000
-        mainImageView.borderWidth = mainImageView.radius
-        tweetButton.center.y -= 20
-        tweetButton.alpha = 0
+    func positionViewsBasedOnAnimationState(state: AnimationState) {
+        switch state {
+        case .InProgress(let percent):
+            print("percent done: \(percent)")
+            loadNextData(true)
+        default:
+            break
+        }
     }
     
     func loadNextData(_: Bool) {
@@ -72,7 +75,15 @@ struct QuoteProvider {
     mutating func nextData() -> Quote {
         // Could actually provide data someday
         count += 1
-        
+        return data
+    }
+    
+    mutating func lastData() -> Quote {
+        count -= 1
+        return data
+    }
+    
+    var data: Quote {
         if count % 2 == 1 {
             return Quote(source: "Paul", image: UIImage(named: "paulrolfe_large")!, text: "I agree!")
         } else {

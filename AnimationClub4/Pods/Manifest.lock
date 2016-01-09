@@ -1,0 +1,21 @@
+PODS:
+  - IntrepidSwiftWisdom (0.0.12):
+    - IntrepidSwiftWisdom/Core (= 0.0.12)
+  - IntrepidSwiftWisdom/Core (0.0.12)
+
+DEPENDENCIES:
+  - IntrepidSwiftWisdom (from `git@github.com:IntrepidPursuits/swift-wisdom.git`)
+
+EXTERNAL SOURCES:
+  IntrepidSwiftWisdom:
+    :git: git@github.com:IntrepidPursuits/swift-wisdom.git
+
+CHECKOUT OPTIONS:
+  IntrepidSwiftWisdom:
+    :commit: fa9e29a58ffcec110860de1d8b49de041e288841
+    :git: git@github.com:IntrepidPursuits/swift-wisdom.git
+
+SPEC CHECKSUMS:
+  IntrepidSwiftWisdom: 8acda68480a30481c0869c0b3607461d4403f410
+
+COCOAPODS: 0.39.0
