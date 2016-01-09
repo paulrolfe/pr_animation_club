@@ -13,19 +13,28 @@ import UIKit
     
     @IBInspectable var borderColor: UIColor {
         didSet {
-            setNeedsDisplay()
+            layer.borderColor = borderColor.CGColor
+            layoutIfNeeded()
         }
     }
     
     @IBInspectable var borderWidth: CGFloat {
         didSet {
-            setNeedsDisplay()
+            // TODO: This is happening poorly still.
+            let circlePath = UIBezierPath(ovalInRect: CGRect(x: 0, y: 0, width: radius * 2, height: radius * 2))
+            roundedLayer.path = circlePath.CGPath
+            roundedLayer.fillColor = UIColor.clearColor().CGColor
+            roundedLayer.strokeColor = UIColor.whiteColor().CGColor
+            roundedLayer.lineWidth = borderWidth * 2 // because the path is in the middle of the stroke.
+            setNeedsLayout()
         }
     }
     
     var radius: CGFloat {
         return min(CGRectGetHeight(bounds), CGRectGetWidth(bounds)) / 2
     }
+    
+    private var roundedLayer = CAShapeLayer()
     
     override init(frame: CGRect) {
         let radius = min(frame.height, frame.width)
@@ -47,12 +56,12 @@ import UIKit
     }
     
     func setup() {
+        layer.addSublayer(roundedLayer)
         clipsToBounds = true
     }
     
     override func layoutSubviews() {
+        super.layoutSubviews()
         layer.cornerRadius = radius
-        layer.borderWidth = borderWidth
-        layer.borderColor = borderColor.CGColor
     }
 }

@@ -33,24 +33,13 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jzs-jX-ebq" customClass="CircleView" customModule="AnimationClub4" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="284" width="320" height="668"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fND-jT-INt">
-                                        <rect key="frame" x="116" y="219" width="88" height="30"/>
-                                        <color key="tintColor" red="0.22604498550920649" green="0.76889123916014823" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        <state key="normal" title="TWEET THIS"/>
-                                    </button>
-                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="fND-jT-INt" secondAttribute="bottom" constant="419" id="gDS-cY-daT"/>
-                                    <constraint firstItem="fND-jT-INt" firstAttribute="centerX" secondItem="Jzs-jX-ebq" secondAttribute="centerX" id="rBW-zG-cZA"/>
-                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="radius">
                                         <real key="value" value="400"/>
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="color" keyPath="circleColor">
-                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="value" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
@@ -69,6 +58,11 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fND-jT-INt">
+                                <rect key="frame" x="116" y="518" width="88" height="30"/>
+                                <color key="tintColor" red="0.22604498550920649" green="0.76889123916014823" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="TWEET THIS"/>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some great quote!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i5V-T1-Syy">
                                 <rect key="frame" x="20" y="40" width="280" height="156"/>
                                 <constraints>
@@ -90,12 +84,14 @@
                             <constraint firstItem="Jzs-jX-ebq" firstAttribute="top" secondItem="TqJ-T4-XjT" secondAttribute="bottom" id="6OE-jb-0X0"/>
                             <constraint firstItem="TqJ-T4-XjT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="73z-q6-sKx"/>
                             <constraint firstItem="TqJ-T4-XjT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-100" id="DAL-4M-IPi"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fND-jT-INt" secondAttribute="bottom" constant="20" id="Kmn-hL-XKD"/>
                             <constraint firstAttribute="trailing" secondItem="i5V-T1-Syy" secondAttribute="trailing" constant="20" id="VJE-hJ-NUP"/>
                             <constraint firstItem="i5V-T1-Syy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="VaL-cL-pQk"/>
                             <constraint firstItem="Jzs-jX-ebq" firstAttribute="height" secondItem="TqJ-T4-XjT" secondAttribute="height" id="Z60-CQ-Xid"/>
                             <constraint firstItem="klP-DH-14q" firstAttribute="top" secondItem="i5V-T1-Syy" secondAttribute="bottom" constant="8" id="b1o-2h-v7w"/>
                             <constraint firstItem="Jzs-jX-ebq" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dZm-BG-NEB"/>
                             <constraint firstItem="Jzs-jX-ebq" firstAttribute="top" secondItem="klP-DH-14q" secondAttribute="centerY" id="e1W-4m-doW"/>
+                            <constraint firstItem="fND-jT-INt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eLz-dD-hw3"/>
                             <constraint firstAttribute="bottom" secondItem="TqJ-T4-XjT" secondAttribute="bottom" id="g0G-NZ-up6"/>
                             <constraint firstAttribute="trailing" secondItem="TqJ-T4-XjT" secondAttribute="trailing" id="jfN-RC-lWr"/>
                             <constraint firstAttribute="trailing" secondItem="Jzs-jX-ebq" secondAttribute="trailing" id="kDq-YT-wEw"/>

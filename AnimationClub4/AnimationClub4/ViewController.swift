@@ -21,51 +21,59 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        //Tap or swipe to move on.
+        // TODO:Add pan to begin animation. Pan just moves up bottom view.
         
         let tap = UITapGestureRecognizer(target: self, action: "next")
         view.addGestureRecognizer(tap)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
     
     dynamic private func next() {
-        UIView.pa_percentAnimate(2, animation: positionViewsBasedOnAnimationState)
+        UIView.animateWithDuration(0.5, animations: animateOut, completion: loadNextData)
     }
     
-    func positionViewsBasedOnAnimationState(state: AnimationState) {
-        switch state {
-        case .InProgress(let percent):
-            print("percent done: \(percent)")
-            loadNextData(true)
-        default:
-            break
-        }
+    func animateOut() {
+        // Just the movements, this is already inside of an animation
+        bottomBackgroundView.center.y = topBackgroundView.center.y
+        mainImageView.borderWidth = mainImageView.radius
+        tweetButton.center.y -= 20
+        tweetButton.alpha = 0
     }
     
     func loadNextData(_: Bool) {
-        quoteLabel.alpha = 0
-        bottomBackgroundView.alpha = 0
-        bottomBackgroundView.center.y = 1000
-        topBackgroundView.center.y = 1000
-        
         let quote = qp.nextData()
         mainImageView.image = quote.image
         quoteLabel.text = quote.text
         
-        UIView.animateWithDuration(1.0, animations: animateIn, completion: nil)
+        // setting positions for animation back in.
+        quoteLabel.alpha = 0
+        bottomBackgroundView.center.y = 1.5 * bottomBackgroundView.bounds.height
+        topBackgroundView.center.y = 1.5 * topBackgroundView.bounds.height
+        tweetButton.center.y = view.bounds.height
+        quoteLabel.center.y += 100
+        mainImageView.borderWidth = mainImageView.radius
+        mainImageView.alpha = 0
+        
+        UIView.animateWithDuration(1.0, delay: 0, options: .CurveEaseOut, animations: animateInQuote, completion: nil)
+        UIView.animateWithDuration(1.0, delay: 0.6, options: .CurveEaseOut, animations: animateInBottom, completion: animateInImage)
     }
     
-    func animateIn() {
+    func animateInQuote() {
         // Just the movements, this is already inside of an animation
         quoteLabel.alpha = 1
+        quoteLabel.center.y -= 100
+        topBackgroundView.center.y = -100
+    }
+    
+    func animateInBottom() {
+        // Just the movements, this is already inside of an animation
         tweetButton.alpha = 1
+        bottomBackgroundView.center.y = view.bounds.height + 100
+    }
+    
+    func animateInImage(_: Bool) {
+        // Just the movements, this is already inside of an animation
+        mainImageView.alpha = 1
         mainImageView.borderWidth = 5
-        view.layoutIfNeeded()
     }
 }
 
