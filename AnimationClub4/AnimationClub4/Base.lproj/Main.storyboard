@@ -58,8 +58,17 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Intrepid" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OX1-wX-O9f">
+                                <rect key="frame" x="110.5" y="372" width="99.5" height="138"/>
+                                <fontDescription key="fontDescription" name="TimesNewRomanPS-BoldMT" family="Times New Roman" pointSize="28"/>
+                                <color key="textColor" red="0.8980392157" green="0.36862745099999999" blue="0.36862745099999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fND-jT-INt">
                                 <rect key="frame" x="116" y="518" width="88" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="8jD-xU-4tT"/>
+                                </constraints>
                                 <color key="tintColor" red="0.22604498550920649" green="0.76889123916014823" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="TWEET THIS"/>
                             </button>
@@ -85,6 +94,7 @@
                             <constraint firstItem="TqJ-T4-XjT" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="73z-q6-sKx"/>
                             <constraint firstItem="TqJ-T4-XjT" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="-100" id="DAL-4M-IPi"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="fND-jT-INt" secondAttribute="bottom" constant="20" id="Kmn-hL-XKD"/>
+                            <constraint firstItem="OX1-wX-O9f" firstAttribute="top" secondItem="klP-DH-14q" secondAttribute="bottom" constant="8" id="PlK-Or-aFD"/>
                             <constraint firstAttribute="trailing" secondItem="i5V-T1-Syy" secondAttribute="trailing" constant="20" id="VJE-hJ-NUP"/>
                             <constraint firstItem="i5V-T1-Syy" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="VaL-cL-pQk"/>
                             <constraint firstItem="Jzs-jX-ebq" firstAttribute="height" secondItem="TqJ-T4-XjT" secondAttribute="height" id="Z60-CQ-Xid"/>
@@ -95,7 +105,9 @@
                             <constraint firstAttribute="bottom" secondItem="TqJ-T4-XjT" secondAttribute="bottom" id="g0G-NZ-up6"/>
                             <constraint firstAttribute="trailing" secondItem="TqJ-T4-XjT" secondAttribute="trailing" id="jfN-RC-lWr"/>
                             <constraint firstAttribute="trailing" secondItem="Jzs-jX-ebq" secondAttribute="trailing" id="kDq-YT-wEw"/>
+                            <constraint firstItem="fND-jT-INt" firstAttribute="top" secondItem="OX1-wX-O9f" secondAttribute="bottom" constant="8" id="kvt-Lv-4Tw"/>
                             <constraint firstItem="klP-DH-14q" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="mSV-M0-638"/>
+                            <constraint firstItem="OX1-wX-O9f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ot5-aL-dQl"/>
                             <constraint firstItem="i5V-T1-Syy" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="20" id="u0f-RJ-ej9"/>
                             <constraint firstItem="klP-DH-14q" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vFT-8X-0hG"/>
                         </constraints>
@@ -111,6 +123,7 @@
                         <outlet property="bottomBackgroundView" destination="Jzs-jX-ebq" id="CaO-nI-c4Q"/>
                         <outlet property="mainImageView" destination="klP-DH-14q" id="536-aJ-52Q"/>
                         <outlet property="quoteLabel" destination="i5V-T1-Syy" id="Ap8-We-whI"/>
+                        <outlet property="sourceLabel" destination="OX1-wX-O9f" id="7w9-iV-hfU"/>
                         <outlet property="topBackgroundView" destination="TqJ-T4-XjT" id="lHh-xC-bZk"/>
                         <outlet property="tweetButton" destination="fND-jT-INt" id="sxh-JC-1rl"/>
                     </connections>
