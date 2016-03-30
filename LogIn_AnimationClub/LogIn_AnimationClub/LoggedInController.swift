@@ -11,8 +11,8 @@ import UIKit
 class LoggedInController: UIViewController {
     
     let navBackground = UIView()
-    let button = UIButton()
     let someLabel = UILabel()
+    let button = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,9 +23,10 @@ class LoggedInController: UIViewController {
             action: #selector(goBack)
         )
         view.backgroundColor = UIColor.whiteColor()
-        title = "Logged In"
+        title = "Dashboard"
         addFakeNavBackground()
         addLabel()
+        addButton()
     }
     
     private func addFakeNavBackground() {
@@ -42,8 +43,25 @@ class LoggedInController: UIViewController {
     private func addLabel() {
         someLabel.text = "This is just text to show the screen's positioning"
         someLabel.sizeToFit()
-        someLabel.frameOrigin = CGPoint(x: 100, y: 200)
+        someLabel.frameOrigin = CGPoint(x: 20, y: 200)
         view.addSubview(someLabel)
+    }
+    
+    private func addButton() {
+        button.backgroundColor = UIColor.greenColor()
+        button.layer.cornerRadius = 30
+        view.addSubview(button)
+        button.constrainView(button, toWidth: 60)
+        button.constrainView(button, toHeight: 60)
+        view.constrainView(
+            button,
+            toInsets: UIEdgeInsets(
+                top: CGFloat(NSNotFound),
+                left: CGFloat(NSNotFound),
+                bottom: 40,
+                right: 40
+            )
+        )
     }
     
     dynamic private func goBack() {

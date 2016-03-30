@@ -53,19 +53,20 @@ class AnimatableNavigationController: UINavigationController, UIViewControllerTr
         
         if let from = fromViewController as? AnimatableNavigationController {
             // Dismissing the nav
-            let gradientMask = GradientView.fadeOutView()
-            gradientMask.frame = fromViewController.view.bounds
+            let gradientMask = GradientView.fadedOutView()
+            gradientMask.frame = toViewController.view.bounds
+            gradientMask.transform = CGAffineTransformMakeTranslation(0, -fromViewController.view.bounds.height)
             
             let mask = UIView(frame: from.view.frame)
             mask.backgroundColor = UIColor.blackColor()
             
-            toViewController.view.maskView = gradientMask
-            gradientMask.transform = CGAffineTransformMakeTranslation(0, -fromViewController.view.bounds.height)
+            let root = from.viewControllers.first as? LoggedInController
             
             containerView?.addSubview(toViewController.view)
             containerView?.addSubview(from.view)
+            
             from.view.maskView = mask
-            let root = from.viewControllers.first as? LoggedInController
+            toViewController.view.maskView = gradientMask
             
             UIView.animateWithDuration(
                 CustomTransitionTime,
@@ -82,7 +83,7 @@ class AnimatableNavigationController: UINavigationController, UIViewControllerTr
             )
         } else if let to = toViewController as? AnimatableNavigationController {
             // Presenting the nav
-            let gradientMask = GradientView.fadeOutView()
+            let gradientMask = GradientView.fadedOutView()
             gradientMask.frame = fromViewController.view.bounds
             
             let mask = UIView(frame: to.view.frame)
@@ -95,6 +96,8 @@ class AnimatableNavigationController: UINavigationController, UIViewControllerTr
             mask.transform = CGAffineTransformMakeTranslation(0, to.view.bounds.height)
             let root = to.viewControllers.first as? LoggedInController
             to.navigationBarHidden = true
+            root?.button.transform = CGAffineTransformMakeScale(0.5, 0.5)
+            root?.button.alpha = 0
             
             UIView.animateWithDuration(
                 CustomTransitionTime,
@@ -109,22 +112,31 @@ class AnimatableNavigationController: UINavigationController, UIViewControllerTr
                     fromViewController.view.maskView = nil
                     transitionContext.completeTransition(true)
 
-                    UIView.animateWithDuration(
-                        3,
-                        delay: 0,
-                        usingSpringWithDamping: 0.2,
-                        initialSpringVelocity: 1.0,
-                        options: .CurveLinear,
-                        animations: {
-                            root?.navBackground.transform = CGAffineTransformIdentity
-                        },
-                        completion: { _ in
-
-                        }
-                    )
+                    UIView.animateSpringy(3) {
+                        root?.navBackground.transform = CGAffineTransformIdentity
+                    }
                 }
             )
+            // button stuff animates at slightly different rates
+            UIView.animateSpringy(CustomTransitionTime + 3) {
+                root?.button.alpha = 1.0
+                root?.button.transform = CGAffineTransformIdentity
+            }
         }
+    }
+}
+
+private extension UIView {
+    class func animateSpringy(duration: NSTimeInterval, animations: () -> ()) {
+        UIView.animateWithDuration(
+            duration,
+            delay: 0,
+            usingSpringWithDamping: 0.2,
+            initialSpringVelocity: 1.0,
+            options: .CurveLinear,
+            animations: animations,
+            completion: nil
+        )
     }
 }
 
@@ -134,7 +146,7 @@ class GradientView: UIView {
         return CAGradientLayer.self
     }
     
-    static func fadeOutView() -> GradientView {
+    static func fadedOutView() -> GradientView {
         let view = GradientView()
         guard let colorLayer = view.layer as? CAGradientLayer else { return view }
         colorLayer.colors = [UIColor.blackColor().CGColor, UIColor.clearColor().CGColor]

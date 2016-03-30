@@ -14,6 +14,13 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNavBar()
+        view.backgroundColor = WeirdGreen
+        title = "Signing in..."
+    }
+    
+    private func setupNavBar() {
+        // Making the nav bar a solid color with no shadow, bar tint, or blur.
         navigationController?.navigationBar.setBackgroundImage(UIImage(), forBarMetrics: .Default)
         navigationController?.navigationBar.shadowImage = UIImage()
         navigationController?.navigationBar.backgroundColor = UIColor.clearColor()
@@ -22,8 +29,6 @@ class ViewController: UIViewController {
         navigationController?.navigationBar.titleTextAttributes = [
             NSForegroundColorAttributeName : UIColor.whiteColor()
         ]
-        view.backgroundColor = WeirdGreen
-        title = "Signing in..."
     }
     
     @IBAction func logInPressed(sender: UIButton) {
